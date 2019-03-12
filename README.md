@@ -41,5 +41,8 @@
 - Replace all the code with our main.cpp code (supplied in this repo)
 
 
+- Place the media folder (supplied in this repo) into the project folder you created. Make sure the references in main.cpp to "../media" are valid
+
+
 - You should now be able to run chessqt
 
