@@ -19,6 +19,8 @@ public:
     bool registration(std::string name, std::string password);
     void calculateResult(int result);
     void recordResult();
+    bool checkIfPlayers();
+    void swapColours();
 };
 
 #endif // ACCOUNTMANAGEMENT_H

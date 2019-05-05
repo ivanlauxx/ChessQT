@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     accs = new AccountManagement;
     ui->menuBar->hide();
+    ui->gameBar->showMessage("Welcome to ChessQT!");
+    ui->playGameButton->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
@@ -70,6 +72,10 @@ void MainWindow::on_p1loginButton_clicked()
             ui->label_p1name->setText("Login Failed");
         }
     }
+
+    if (accs->checkIfPlayers() == true) {
+        enablePlay();
+    }
 }
 
 void MainWindow::on_p2loginButton_clicked()
@@ -91,6 +97,10 @@ void MainWindow::on_p2loginButton_clicked()
             ui->label_p2name->setStyleSheet("QLabel { color: red; }");
             ui->label_p2name->setText("Login Failed");
         }
+    }
+
+    if (accs->checkIfPlayers() == true) {
+        enablePlay();
     }
 }
 
@@ -128,7 +138,7 @@ void MainWindow::on_boardButton_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_playGameButton_clicked()
 {
     ui->menuBar->show();
     scene = new QGraphicsScene(this);
@@ -199,4 +209,16 @@ void MainWindow::on_actionResign_triggered()
 void MainWindow::on_backButton_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->currentIndex() - 1);
+}
+
+void MainWindow::enablePlay() {
+    ui->playGameButton->setEnabled(true);
+}
+
+void MainWindow::on_swapButton_clicked()
+{
+    accs->swapColours();
+    displayPlayer1(accs->player1);
+    displayPlayer2(accs->player2);
+
 }

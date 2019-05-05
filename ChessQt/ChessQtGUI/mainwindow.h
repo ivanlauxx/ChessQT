@@ -36,12 +36,13 @@ private slots:
     void on_p2loginButton_clicked();
     void on_backButton_clicked();
     void on_boardButton_clicked();
-    void on_pushButton_clicked();
+    void on_playGameButton_clicked();
     void on_spinBox_valueChanged(int arg1);
-
     void on_actionResign_triggered();
-
     void on_backButton_2_clicked();
+    void enablePlay();
+
+    void on_swapButton_clicked();
 
 private:
     Ui::MainWindow *ui = nullptr;

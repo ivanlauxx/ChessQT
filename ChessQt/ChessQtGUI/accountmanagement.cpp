@@ -120,3 +120,23 @@ void AccountManagement::recordResult()
     rename("../../temp.txt","../../playerData.txt");
     temp.close();
 }
+
+bool AccountManagement::checkIfPlayers()
+{
+    bool bothPlayers = false;
+    if (player1.getName() != "" && player2.getName() != "") {
+        bothPlayers = true;
+    }
+
+    return bothPlayers;
+}
+
+void AccountManagement::swapColours()
+{
+    Player whitePlayer = player1;
+    Player blackPlayer = player2;
+
+    Player temp = whitePlayer;
+    player1 = blackPlayer;
+    player2 = temp;
+}

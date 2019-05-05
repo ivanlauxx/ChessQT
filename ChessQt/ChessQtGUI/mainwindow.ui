@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="mainPage">
      <widget class="QPushButton" name="gamePageButton">
@@ -55,11 +55,11 @@
      </widget>
     </widget>
     <widget class="QWidget" name="gamePage">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="playGameButton">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>290</y>
+        <x>140</x>
+        <y>230</y>
         <width>200</width>
         <height>40</height>
        </rect>
@@ -71,8 +71,8 @@
      <widget class="QPushButton" name="boardButton">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>350</y>
+        <x>140</x>
+        <y>290</y>
         <width>200</width>
         <height>40</height>
        </rect>
@@ -81,69 +81,11 @@
        <string>Score Board</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="p1loginButton">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>130</y>
-        <width>80</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Login</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_p1name">
-      <property name="geometry">
-       <rect>
-        <x>-1</x>
-        <y>70</y>
-        <width>221</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Login to play</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_p2name">
-      <property name="geometry">
-       <rect>
-        <x>279</x>
-        <y>70</y>
-        <width>221</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Login to play</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="p2loginButton">
-      <property name="geometry">
-       <rect>
-        <x>350</x>
-        <y>130</y>
-        <width>80</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Login</string>
-      </property>
-     </widget>
      <widget class="QSpinBox" name="spinBox">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>240</y>
+        <x>260</x>
+        <y>180</y>
         <width>50</width>
         <height>30</height>
        </rect>
@@ -173,8 +115,8 @@
      <widget class="QLabel" name="size_of_board">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>240</y>
+        <x>140</x>
+        <y>180</y>
         <width>121</width>
         <height>30</height>
        </rect>
@@ -186,43 +128,11 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_p1name_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>40</y>
-        <width>220</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>White:</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_p1name_3">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>40</y>
-        <width>220</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Black:</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
      <widget class="QPushButton" name="backButton_2">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>400</y>
+        <x>190</x>
+        <y>340</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -230,6 +140,103 @@
       <property name="text">
        <string>Back</string>
       </property>
+     </widget>
+     <widget class="QPushButton" name="swapButton">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>90</y>
+        <width>111</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Swap Colours</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>151</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>White</string>
+      </property>
+      <widget class="QLabel" name="label_p1name">
+       <property name="geometry">
+        <rect>
+         <x>-40</x>
+         <y>20</y>
+         <width>221</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Login to play</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="p1loginButton">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>40</y>
+        <width>151</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Black</string>
+      </property>
+      <widget class="QPushButton" name="p2loginButton">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_p2name">
+       <property name="geometry">
+        <rect>
+         <x>-40</x>
+         <y>20</y>
+         <width>221</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Login to play</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="page">
@@ -410,6 +417,7 @@
    </widget>
    <addaction name="menuGame"/>
   </widget>
+  <widget class="QStatusBar" name="gameBar"/>
   <action name="actionResign">
    <property name="text">
     <string>Resign</string>
