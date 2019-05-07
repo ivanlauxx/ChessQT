@@ -7,9 +7,13 @@
 #include "pawn.h"
 #include "move.h"
 #include "take.h"
+#include "mainwindow.h"
+#include <QMessageBox>
+#include <cstdlib>
 
-Handler::Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize)
+Handler::Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize, AccountManagement* accs_)
 {
+    accs = accs_;
     window = handlerWindow;
     window->setWindowTitle("White 0 - 0 Black");
 
@@ -154,6 +158,8 @@ void Handler::moveSelected(QPointF offset)
     {
         turn = 'w';
     }
+
+    checkWin();
 }
 
 void Handler::addToScene(QGraphicsPixmapItem *item, int square, int layer)
@@ -262,4 +268,35 @@ int Handler::indexOffset(QPointF offset)
 char Handler::getTurn()
 {
     return turn;
+}
+
+void Handler::checkWin()
+{
+    bool isWin = false;
+    QString winnerName;
+    // If white's score is higher than black's and is above 20, give white the win.
+    if (scoreWhite > scoreBlack && scoreWhite >= 20)
+    {
+        accs->calculateResult(1);
+        winnerName = QString::fromStdString(accs->player1.getName());
+        isWin = true;
+    }
+    // If black's score is higher than white's and is above 20, give black the win.
+    if (scoreBlack > scoreWhite && scoreBlack >= 20)
+    {
+        accs->calculateResult(0);
+        winnerName = QString::fromStdString(accs->player2.getName());
+        isWin = true;
+    }
+
+    // If a player has won, show a message box and then return to the login screen.
+    if (isWin)
+    {
+        QMessageBox resign;
+        resign.setWindowTitle("Game Over");
+        resign.setText(winnerName + " has won the game!");
+        resign.exec();
+        qobject_cast<MainWindow*>(window->topLevelWidget())->returnToLogin();
+        qobject_cast<MainWindow*>(window->topLevelWidget())->setWindowTitle("ChessQt");
+    }
 }

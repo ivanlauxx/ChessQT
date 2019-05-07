@@ -142,7 +142,7 @@ void MainWindow::on_playGameButton_clicked()
 {
     ui->menuBar->show();
     scene = new QGraphicsScene(this);
-    handler = new Handler(this, scene, size);
+    handler = new Handler(this, scene, size, accs);
     ui->graphicsView->resetMatrix();
     if (size > 5)
     {
@@ -220,5 +220,9 @@ void MainWindow::on_swapButton_clicked()
     accs->swapColours();
     displayPlayer1(accs->player1);
     displayPlayer2(accs->player2);
+}
 
+void MainWindow::returnToLogin()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->currentIndex() - 2);
 }

@@ -4,11 +4,12 @@
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
+#include "accountmanagement.h"
 
 class Handler
 {
 public:
-    Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize);
+    Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize, AccountManagement* accs_);
     ~Handler();
     bool selectPiece(char colour, QGraphicsPixmapItem *piece);
     bool showMoves(int row, int col, char colour);
@@ -22,6 +23,7 @@ private:
     int size;
     int sizeSquared;
     int sizeSquared2;
+    AccountManagement* accs;
     int *state;
     QGraphicsPixmapItem **items;
     char turn = 'w';
@@ -34,6 +36,7 @@ private:
     void addToScene(QGraphicsPixmapItem *item, int square, int layer);
     int index(int row, int col);
     int indexOffset(QPointF offset);
+    void checkWin();
 };
 
 #endif // HANDLER_H

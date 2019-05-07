@@ -28,6 +28,7 @@ public:
     void displayPlayer2(Player p);
     void displayPlayer1(Player p);
     void keyPressEvent(QKeyEvent *event);
+    void returnToLogin();
 
 private slots:
     void on_gamePageButton_clicked();
@@ -41,7 +42,6 @@ private slots:
     void on_actionResign_triggered();
     void on_backButton_2_clicked();
     void enablePlay();
-
     void on_swapButton_clicked();
 
 private:
