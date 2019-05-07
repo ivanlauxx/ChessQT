@@ -292,10 +292,10 @@ void Handler::checkWin()
     // If a player has won, show a message box and then return to the login screen.
     if (isWin)
     {
-        QMessageBox resign;
-        resign.setWindowTitle("Game Over");
-        resign.setText(winnerName + " has won the game!");
-        resign.exec();
+        QMessageBox gameOver;
+        gameOver.setWindowTitle("Game Over");
+        gameOver.setText(winnerName + " has won the game!");
+        gameOver.exec();
         // This helped: https://stackoverflow.com/questions/5920527/qt-c-accessing-mainwindow-ui-from-a-different-class.
         qobject_cast<MainWindow*>(window->topLevelWidget())->returnToLogin();
         qobject_cast<MainWindow*>(window->topLevelWidget())->setWindowTitle("ChessQt");
