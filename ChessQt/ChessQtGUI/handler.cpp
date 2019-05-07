@@ -296,6 +296,7 @@ void Handler::checkWin()
         resign.setWindowTitle("Game Over");
         resign.setText(winnerName + " has won the game!");
         resign.exec();
+        // This helped: https://stackoverflow.com/questions/5920527/qt-c-accessing-mainwindow-ui-from-a-different-class.
         qobject_cast<MainWindow*>(window->topLevelWidget())->returnToLogin();
         qobject_cast<MainWindow*>(window->topLevelWidget())->setWindowTitle("ChessQt");
     }
