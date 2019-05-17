@@ -217,9 +217,11 @@ void MainWindow::enablePlay() {
 
 void MainWindow::on_swapButton_clicked()
 {
-    accs->swapColours();
-    displayPlayer1(accs->player1);
-    displayPlayer2(accs->player2);
+    if (accs->checkIfPlayers()) {
+        accs->swapColours();
+        displayPlayer1(accs->player1);
+        displayPlayer2(accs->player2);
+    }
 }
 
 void MainWindow::returnToLogin()
