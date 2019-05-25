@@ -9,7 +9,7 @@
 class Handler
 {
 public:
-    Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize, AccountManagement* accs_);
+    Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize, AccountManagement* accs_, QStatusBar* gameBar);
     ~Handler();
     bool selectPiece(char colour, QGraphicsPixmapItem *piece);
     bool showMoves(int row, int col, char colour);
@@ -24,6 +24,7 @@ private:
     int sizeSquared;
     int sizeSquared2;
     AccountManagement* accs;
+    QStatusBar* gameBar;
     int *state;
     QGraphicsPixmapItem **items;
     char turn = 'w';

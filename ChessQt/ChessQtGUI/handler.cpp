@@ -9,13 +9,16 @@
 #include "take.h"
 #include "mainwindow.h"
 #include <QMessageBox>
+#include <QStatusBar>
 #include <cstdlib>
 
-Handler::Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize, AccountManagement* accs_)
+Handler::Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize, AccountManagement* accs_, QStatusBar* gameBar_)
 {
     accs = accs_;
     window = handlerWindow;
+    gameBar = gameBar_;
     window->setWindowTitle("White 0 - 0 Black");
+    gameBar->showMessage("It is White's turn.");
 
     scene = handlerScene;
 
@@ -153,10 +156,12 @@ void Handler::moveSelected(QPointF offset)
     if (turn == 'w')
     {
         turn = 'b';
+        gameBar->showMessage("It is Black's turn.");
     }
     else
     {
         turn = 'w';
+        gameBar->showMessage("It is White's turn.");
     }
 
     checkWin();

@@ -25,18 +25,21 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_gamePageButton_clicked()
 {
+    // Moves the stacked widget from main screen to login screen.
     ui->stackedWidget->setCurrentIndex(1);
     accs->playersList = accs->loadList();
 }
 
 void MainWindow::on_registrationButton_clicked()
 {
+    // Opens a new registration dialog box.
     RegistrationDialog regi;
     regi.setModal(true);
     QMessageBox msgBox;
     msgBox.setWindowTitle("Registration");
     if(regi.exec() == RegistrationDialog::Accepted)
     {
+        // Gets fields from the registration dialog.
         std::string username = regi.getUsername().toStdString();
         std::string password = regi.getPassword().toStdString();
         if(accs->registration(username, password))
@@ -54,30 +57,37 @@ void MainWindow::on_registrationButton_clicked()
 
 void MainWindow::on_p1loginButton_clicked()
 {
+    // Opens a login dialog.
     accs->player1 = Player();
     LoginDialog login1;
     login1.setModal(true);
     if(login1.exec() == LoginDialog::Accepted)
     {
+        // Gets fields from login dialog.
         std::string username = login1.getUsername().toStdString();
         std::string password = login1.getPassword().toStdString();
+        // If the account management is able to log the player in...
         if (accs->login(accs->player1, username, password))
         {
+            // Display the player's name in the Player 1 section of the menu.
             ui->label_p1name->setStyleSheet("QLabel { color: black; }");
             displayPlayer1(accs->player1);
         }
         else
         {
+            // Display login failed in red text in the Player 1 section of the menu.
             ui->label_p1name->setStyleSheet("QLabel { color: red; }");
             ui->label_p1name->setText("Login Failed");
         }
     }
 
+    // If both players are logged in, the "Play Game" button becomes available for clicking.
     if (accs->checkIfPlayers() == true) {
         enablePlay();
     }
 }
 
+// Same as on_p1loginButton_clicked(), but for Player 2.
 void MainWindow::on_p2loginButton_clicked()
 {
     accs->player2 = Player();
@@ -118,6 +128,7 @@ void MainWindow::displayPlayer1(Player p)
 
 void MainWindow::on_backButton_clicked()
 {
+    // Moves the stacked widget "up" a page.
     ui->stackedWidget->setCurrentIndex(1);
 }
 
@@ -142,7 +153,7 @@ void MainWindow::on_playGameButton_clicked()
 {
     ui->menuBar->show();
     scene = new QGraphicsScene(this);
-    handler = new Handler(this, scene, size, accs);
+    handler = new Handler(this, scene, size, accs, ui->gameBar);
     ui->graphicsView->resetMatrix();
     if (size > 5)
     {
@@ -217,6 +228,7 @@ void MainWindow::enablePlay() {
 
 void MainWindow::on_swapButton_clicked()
 {
+    // If the Player 1 and Player 2 are both logged in, swap them.
     if (accs->checkIfPlayers()) {
         accs->swapColours();
         displayPlayer1(accs->player1);
@@ -226,5 +238,7 @@ void MainWindow::on_swapButton_clicked()
 
 void MainWindow::returnToLogin()
 {
+    // Moves the stacked widget from the game screen to the main menu.
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->currentIndex() - 2);
+    // Freeing memory previously held by handler and graphics scene.
 }
