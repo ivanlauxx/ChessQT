@@ -10,13 +10,15 @@
 #include "mainwindow.h"
 #include <QMessageBox>
 #include <QStatusBar>
+#include <QMenuBar>
 #include <cstdlib>
 
-Handler::Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize, AccountManagement* accs_, QStatusBar* gameBar_)
+Handler::Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize, AccountManagement *accs_, QStatusBar *gameBar_, QMenuBar *menuBar_)
 {
     accs = accs_;
     window = handlerWindow;
     gameBar = gameBar_;
+    menuBar = menuBar_;
     window->setWindowTitle("White 0 - 0 Black");
     gameBar->showMessage("It is White's turn.");
 
@@ -304,5 +306,7 @@ void Handler::checkWin()
         // This helped: https://stackoverflow.com/questions/5920527/qt-c-accessing-mainwindow-ui-from-a-different-class.
         qobject_cast<MainWindow*>(window->topLevelWidget())->returnToLogin();
         qobject_cast<MainWindow*>(window->topLevelWidget())->setWindowTitle("ChessQt");
+        gameBar->showMessage("");
+        menuBar->hide();
     }
 }

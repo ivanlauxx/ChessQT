@@ -153,7 +153,7 @@ void MainWindow::on_playGameButton_clicked()
 {
     ui->menuBar->show();
     scene = new QGraphicsScene(this);
-    handler = new Handler(this, scene, size, accs, ui->gameBar);
+    handler = new Handler(this, scene, size, accs, ui->gameBar, ui->menuBar);
     ui->graphicsView->resetMatrix();
     if (size > 5)
     {
@@ -215,6 +215,8 @@ void MainWindow::on_actionResign_triggered()
     resign.exec();
     // Returns to the login screen.
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->currentIndex() - 2);
+    setWindowTitle("ChessQt");
+    ui->menuBar->hide();
 }
 
 void MainWindow::on_backButton_2_clicked()
