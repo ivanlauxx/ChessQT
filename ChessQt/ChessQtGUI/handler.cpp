@@ -115,7 +115,8 @@ bool Handler::selectPiece(char colour, QGraphicsPixmapItem *piece)
                                     QString::number(scoreBlack) +
                                     " Black");
             moveSelected(piece->offset());
-            delete piece;
+            piece->hide();
+            checkWin();
         }
     }
     return false;
@@ -165,8 +166,6 @@ void Handler::moveSelected(QPointF offset)
         turn = 'w';
         gameBar->showMessage("It is White's turn.");
     }
-
-    checkWin();
 }
 
 void Handler::addToScene(QGraphicsPixmapItem *item, int square, int layer)
@@ -282,14 +281,14 @@ void Handler::checkWin()
     bool isWin = false;
     QString winnerName;
     // If white's score is higher than black's and is above 20, give white the win.
-    if (scoreWhite > scoreBlack && scoreWhite >= 20)
+    if (scoreWhite > scoreBlack && scoreWhite >= 1)
     {
         accs->calculateResult(1);
         winnerName = QString::fromStdString(accs->player1.getName());
         isWin = true;
     }
     // If black's score is higher than white's and is above 20, give black the win.
-    if (scoreBlack > scoreWhite && scoreBlack >= 20)
+    if (scoreBlack > scoreWhite && scoreBlack >= 1)
     {
         accs->calculateResult(0);
         winnerName = QString::fromStdString(accs->player2.getName());
@@ -303,10 +302,10 @@ void Handler::checkWin()
         gameOver.setWindowTitle("Game Over");
         gameOver.setText(winnerName + " has won the game!");
         gameOver.exec();
-        // This helped: https://stackoverflow.com/questions/5920527/qt-c-accessing-mainwindow-ui-from-a-different-class.
-        qobject_cast<MainWindow*>(window->topLevelWidget())->returnToLogin();
-        qobject_cast<MainWindow*>(window->topLevelWidget())->setWindowTitle("ChessQt");
         gameBar->showMessage("");
         menuBar->hide();
+        // This helped: https://stackoverflow.com/questions/5920527/qt-c-accessing-mainwindow-ui-from-a-different-class.
+        qobject_cast<MainWindow*>(window->topLevelWidget())->setWindowTitle("ChessQt");
+        qobject_cast<MainWindow*>(window->topLevelWidget())->returnToLogin();
     }
 }

@@ -5,7 +5,6 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsItem>
-#include <QKeyEvent>
 #include <QMessageBox>
 #include "accountmanagement.h"
 #include "handler.h"
@@ -27,7 +26,6 @@ public:
     ~MainWindow();
     void displayPlayer2(Player p);
     void displayPlayer1(Player p);
-    void keyPressEvent(QKeyEvent *event);
     void returnToLogin();
 
 private slots:
@@ -41,8 +39,8 @@ private slots:
     void on_spinBox_valueChanged(int arg1);
     void on_actionResign_triggered();
     void on_backButton_2_clicked();
-    void enablePlay();
     void on_swapButton_clicked();
+    void enablePlay();
 
 private:
     Ui::MainWindow *ui = nullptr;

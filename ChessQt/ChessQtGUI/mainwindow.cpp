@@ -5,6 +5,7 @@
 #include "player.h"
 #include "logindialog.h"
 #include "handler.h"
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -21,6 +22,14 @@ MainWindow::~MainWindow()
 {
     delete accs;
     delete ui;
+    if (scene)
+    {
+        delete scene;
+    }
+    if (handler)
+    {
+        delete handler;
+    }
 }
 
 void MainWindow::on_gamePageButton_clicked()
@@ -152,8 +161,19 @@ void MainWindow::on_boardButton_clicked()
 void MainWindow::on_playGameButton_clicked()
 {
     ui->menuBar->show();
+    
+    if (scene)
+    {
+        delete scene;
+    }
     scene = new QGraphicsScene(this);
+    
+    if (handler)
+    {
+        delete handler;
+    }
     handler = new Handler(this, scene, size, accs, ui->gameBar, ui->menuBar);
+    
     ui->graphicsView->resetMatrix();
     if (size > 5)
     {
@@ -168,27 +188,6 @@ void MainWindow::on_playGameButton_clicked()
 void MainWindow::on_spinBox_valueChanged(int arg1)
 {
     size = arg1;
-}
-
-void MainWindow::keyPressEvent(QKeyEvent *event)
-{
-    if (event->key() == Qt::Key_Escape && ui->stackedWidget->currentIndex() == 3)
-    {
-        ui->stackedWidget->setCurrentIndex(1);
-        setWindowTitle("ChessQt");
-        if (handler->getScore() < 0)
-        {
-            accs->calculateResult(1);
-        }
-        else if (handler->getScore() > 0)
-        {
-            accs->calculateResult(2);
-        }
-        delete handler;
-        handler = nullptr;
-        delete scene;
-        scene = nullptr;
-    }
 }
 
 void MainWindow::on_actionResign_triggered()
@@ -242,5 +241,4 @@ void MainWindow::returnToLogin()
 {
     // Moves the stacked widget from the game screen to the main menu.
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->currentIndex() - 2);
-    // Freeing memory previously held by handler and graphics scene.
 }
