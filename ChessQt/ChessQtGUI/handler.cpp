@@ -11,7 +11,6 @@
 #include <QMessageBox>
 #include <QStatusBar>
 #include <QMenuBar>
-#include <cstdlib>
 
 Handler::Handler(QMainWindow *handlerWindow, QGraphicsScene *handlerScene, int handlerSize, AccountManagement *accs_, QStatusBar *gameBar_, QMenuBar *menuBar_)
 {
@@ -281,14 +280,14 @@ void Handler::checkWin()
     bool isWin = false;
     QString winnerName;
     // If white's score is higher than black's and is above 20, give white the win.
-    if (scoreWhite > scoreBlack && scoreWhite >= 1)
+    if (scoreWhite > scoreBlack && scoreWhite >= 20)
     {
         accs->calculateResult(1);
         winnerName = QString::fromStdString(accs->player1.getName());
         isWin = true;
     }
     // If black's score is higher than white's and is above 20, give black the win.
-    if (scoreBlack > scoreWhite && scoreBlack >= 1)
+    if (scoreBlack > scoreWhite && scoreBlack >= 20)
     {
         accs->calculateResult(0);
         winnerName = QString::fromStdString(accs->player2.getName());

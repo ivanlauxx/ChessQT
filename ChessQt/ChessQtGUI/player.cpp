@@ -13,11 +13,6 @@ Player::Player(std::string n, std::string p, int g, int w, int l)
     this->gameLose = l;
 }
 
-void Player::printPlayerRecord()
-{
-    std::cout << "Name: " << name << "\nGames Played: " << gamePlayed << "\nGames Won: " << gameWin << "\nGames Lost: " << gameLose << std::endl;
-}
-
 void Player::setgamePlayed()
 {
     this->gamePlayed++;

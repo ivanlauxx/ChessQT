@@ -8,7 +8,6 @@ class Player
 public:
     Player();
     Player(std::string n, std::string p, int g, int w, int l);
-    void printPlayerRecord();
     void setgamePlayed();
     void setgameWon();
     void setgameLose();

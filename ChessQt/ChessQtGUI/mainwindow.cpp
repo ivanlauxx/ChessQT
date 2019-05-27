@@ -5,7 +5,6 @@
 #include "player.h"
 #include "logindialog.h"
 #include "handler.h"
-#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

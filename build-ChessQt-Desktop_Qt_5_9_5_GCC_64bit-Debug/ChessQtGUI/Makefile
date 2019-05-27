@@ -64,11 +64,9 @@ SOURCES       = ../../ChessQt/ChessQtGUI/main.cpp \
 		../../ChessQt/ChessQtGUI/piece.cpp \
 		../../ChessQt/ChessQtGUI/queen.cpp \
 		../../ChessQt/ChessQtGUI/rook.cpp \
-		../../ChessQt/ChessQtGUI/take.cpp \
-		../../ChessQt/ChessQtGUI/tests.cpp moc_mainwindow.cpp \
+		../../ChessQt/ChessQtGUI/take.cpp moc_mainwindow.cpp \
 		moc_logindialog.cpp \
-		moc_registrationdialog.cpp \
-		moc_tests.cpp
+		moc_registrationdialog.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		accountmanagement.o \
@@ -84,11 +82,9 @@ OBJECTS       = main.o \
 		queen.o \
 		rook.o \
 		take.o \
-		tests.o \
 		moc_mainwindow.o \
 		moc_logindialog.o \
-		moc_registrationdialog.o \
-		moc_tests.o
+		moc_registrationdialog.o
 DIST          = /home/will/Qt/5.9.5/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/will/Qt/5.9.5/gcc_64/mkspecs/common/unix.conf \
 		/home/will/Qt/5.9.5/gcc_64/mkspecs/common/linux.conf \
@@ -259,8 +255,7 @@ DIST          = /home/will/Qt/5.9.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../../ChessQt/ChessQtGUI/piece.h \
 		../../ChessQt/ChessQtGUI/queen.h \
 		../../ChessQt/ChessQtGUI/rook.h \
-		../../ChessQt/ChessQtGUI/take.h \
-		../../ChessQt/ChessQtGUI/tests.h ../../ChessQt/ChessQtGUI/main.cpp \
+		../../ChessQt/ChessQtGUI/take.h ../../ChessQt/ChessQtGUI/main.cpp \
 		../../ChessQt/ChessQtGUI/mainwindow.cpp \
 		../../ChessQt/ChessQtGUI/accountmanagement.cpp \
 		../../ChessQt/ChessQtGUI/logindialog.cpp \
@@ -274,8 +269,7 @@ DIST          = /home/will/Qt/5.9.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../../ChessQt/ChessQtGUI/piece.cpp \
 		../../ChessQt/ChessQtGUI/queen.cpp \
 		../../ChessQt/ChessQtGUI/rook.cpp \
-		../../ChessQt/ChessQtGUI/take.cpp \
-		../../ChessQt/ChessQtGUI/tests.cpp
+		../../ChessQt/ChessQtGUI/take.cpp
 QMAKE_TARGET  = ChessQtGUI
 DESTDIR       = 
 TARGET        = ChessQtGUI
@@ -627,8 +621,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/will/Qt/5.9.5/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../../ChessQt/ChessQtGUI/mainwindow.h ../../ChessQt/ChessQtGUI/accountmanagement.h ../../ChessQt/ChessQtGUI/logindialog.h ../../ChessQt/ChessQtGUI/registrationdialog.h ../../ChessQt/ChessQtGUI/player.h ../../ChessQt/ChessQtGUI/bishop.h ../../ChessQt/ChessQtGUI/handler.h ../../ChessQt/ChessQtGUI/knight.h ../../ChessQt/ChessQtGUI/move.h ../../ChessQt/ChessQtGUI/pawn.h ../../ChessQt/ChessQtGUI/piece.h ../../ChessQt/ChessQtGUI/queen.h ../../ChessQt/ChessQtGUI/rook.h ../../ChessQt/ChessQtGUI/take.h ../../ChessQt/ChessQtGUI/tests.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../../ChessQt/ChessQtGUI/main.cpp ../../ChessQt/ChessQtGUI/mainwindow.cpp ../../ChessQt/ChessQtGUI/accountmanagement.cpp ../../ChessQt/ChessQtGUI/logindialog.cpp ../../ChessQt/ChessQtGUI/registrationdialog.cpp ../../ChessQt/ChessQtGUI/player.cpp ../../ChessQt/ChessQtGUI/bishop.cpp ../../ChessQt/ChessQtGUI/handler.cpp ../../ChessQt/ChessQtGUI/knight.cpp ../../ChessQt/ChessQtGUI/move.cpp ../../ChessQt/ChessQtGUI/pawn.cpp ../../ChessQt/ChessQtGUI/piece.cpp ../../ChessQt/ChessQtGUI/queen.cpp ../../ChessQt/ChessQtGUI/rook.cpp ../../ChessQt/ChessQtGUI/take.cpp ../../ChessQt/ChessQtGUI/tests.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../../ChessQt/ChessQtGUI/mainwindow.h ../../ChessQt/ChessQtGUI/accountmanagement.h ../../ChessQt/ChessQtGUI/logindialog.h ../../ChessQt/ChessQtGUI/registrationdialog.h ../../ChessQt/ChessQtGUI/player.h ../../ChessQt/ChessQtGUI/bishop.h ../../ChessQt/ChessQtGUI/handler.h ../../ChessQt/ChessQtGUI/knight.h ../../ChessQt/ChessQtGUI/move.h ../../ChessQt/ChessQtGUI/pawn.h ../../ChessQt/ChessQtGUI/piece.h ../../ChessQt/ChessQtGUI/queen.h ../../ChessQt/ChessQtGUI/rook.h ../../ChessQt/ChessQtGUI/take.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../ChessQt/ChessQtGUI/main.cpp ../../ChessQt/ChessQtGUI/mainwindow.cpp ../../ChessQt/ChessQtGUI/accountmanagement.cpp ../../ChessQt/ChessQtGUI/logindialog.cpp ../../ChessQt/ChessQtGUI/registrationdialog.cpp ../../ChessQt/ChessQtGUI/player.cpp ../../ChessQt/ChessQtGUI/bishop.cpp ../../ChessQt/ChessQtGUI/handler.cpp ../../ChessQt/ChessQtGUI/knight.cpp ../../ChessQt/ChessQtGUI/move.cpp ../../ChessQt/ChessQtGUI/pawn.cpp ../../ChessQt/ChessQtGUI/piece.cpp ../../ChessQt/ChessQtGUI/queen.cpp ../../ChessQt/ChessQtGUI/rook.cpp ../../ChessQt/ChessQtGUI/take.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../../ChessQt/ChessQtGUI/mainwindow.ui ../../ChessQt/ChessQtGUI/registrationdialog.ui ../../ChessQt/ChessQtGUI/logindialog.ui $(DISTDIR)/
 
 
@@ -660,9 +654,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /home/will/Qt/5.9.5/gcc_64/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h /home/will/Qt/5.9.5/gcc_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp moc_logindialog.cpp moc_registrationdialog.cpp moc_tests.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_logindialog.cpp moc_registrationdialog.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp moc_logindialog.cpp moc_registrationdialog.cpp moc_tests.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_logindialog.cpp moc_registrationdialog.cpp
 moc_mainwindow.cpp: /home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMainWindow \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmainwindow.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -778,7 +772,6 @@ moc_mainwindow.cpp: /home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMainWindow \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qframe.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsItem \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsitem.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/QKeyEvent \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMessageBox \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmessagebox.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialog.h \
@@ -1005,327 +998,6 @@ moc_registrationdialog.cpp: /home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QDialog
 		/home/will/Qt/5.9.5/gcc_64/bin/moc
 	/home/will/Qt/5.9.5/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/will/Qt/5.9.5/gcc_64/mkspecs/linux-g++ -I/home/will/Desktop/prog/c++/ChessQt/ChessQt/ChessQtGUI -I/home/will/Qt/5.9.5/gcc_64/include -I/home/will/Qt/5.9.5/gcc_64/include/QtWidgets -I/home/will/Qt/5.9.5/gcc_64/include/QtGui -I/home/will/Qt/5.9.5/gcc_64/include/QtTest -I/home/will/Qt/5.9.5/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../../ChessQt/ChessQtGUI/registrationdialog.h -o moc_registrationdialog.cpp
 
-moc_tests.cpp: /home/will/Qt/5.9.5/gcc_64/include/QtTest/QtTest \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/QtTestDepends \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QtCore \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QtCoreDepends \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qglobal.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qconfig.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtcore-config.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsystemdetection.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qprocessordetection.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcompilerdetection.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtypeinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsysinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlogging.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qflags.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qatomic.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbasicatomic.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qgenericatomic.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qatomic_cxx11.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qatomic_msvc.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qglobalstatic.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmutex.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qnumeric.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qversiontagging.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractanimation.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobject.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobjectdefs.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qnamespace.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstring.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qchar.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbytearray.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qrefcount.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qarraydata.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstringbuilder.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlist.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qalgorithms.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qiterator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qhashfunctions.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpair.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbytearraylist.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstringlist.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qregexp.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstringmatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcoreevent.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qscopedpointer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmetatype.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qvarlengtharray.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcontainerfwd.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobject_impl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstracteventdispatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qeventloop.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qvariant.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmap.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdebug.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qhash.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtextstream.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qiodevice.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlocale.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qshareddata.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qvector.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpoint.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qset.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcontiguouscache.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsharedpointer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractproxymodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractstate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstracttransition.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qanimationgroup.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qarraydataops.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qarraydatapointer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbasictimer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbitarray.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbuffer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbytearraymatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcache.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcollator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcommandlineoption.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcommandlineparser.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcryptographichash.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdatastream.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdatetime.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdeadlinetimer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qelapsedtimer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdir.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfileinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfile.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfiledevice.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdiriterator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qeasingcurve.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qendian.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qeventtransition.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qexception.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfactoryinterface.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfileselector.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QObject \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QStringList \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfilesystemwatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfinalstate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfuture.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfutureinterface.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qrunnable.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qresultstore.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfuturesynchronizer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfuturewatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qhistorystate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qidentityproxymodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qisenum.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qjsonarray.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qjsonvalue.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qjsondocument.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qjsonobject.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlibrary.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlibraryinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qversionnumber.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qline.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlinkedlist.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlockfile.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qloggingcategory.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmargins.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmath.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmessageauthenticationcode.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmetaobject.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmimedata.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmimedatabase.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmimetype.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobjectcleanuphandler.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qoperatingsystemversion.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qparallelanimationgroup.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpauseanimation.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qplugin.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpointer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpluginloader.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qprocess.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpropertyanimation.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qvariantanimation.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qqueue.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qreadwritelock.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qrect.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsize.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qregularexpression.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qresource.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsavefile.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qscopedvaluerollback.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsemaphore.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsequentialanimationgroup.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsettings.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsharedmemory.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsignalmapper.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsignaltransition.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsocketnotifier.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsortfilterproxymodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstack.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstandardpaths.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstatemachine.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstorageinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstringlistmodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsystemsemaphore.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtemporarydir.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QScopedPointer \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtemporaryfile.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtextboundaryfinder.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtextcodec.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qthread.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qthreadpool.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qthreadstorage.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtimeline.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtimer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtimezone.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtranslator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtypetraits.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qurl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qurlquery.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/quuid.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qwaitcondition.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qwineventnotifier.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qxmlstream.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtcoreversion.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qbenchmark.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest_global.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qbenchmarkmetric.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qsignalspy.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtesteventloop.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestcase.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestdata.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestsystem.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/QWindow \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qwindow.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtguiglobal.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtgui-config.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QEvent \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QMargins \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QRect \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qsurface.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qsurfaceformat.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qwindowdefs.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qicon.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpixmap.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpaintdevice.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qcolor.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qrgb.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qrgba64.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qimage.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpixelformat.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtransform.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qmatrix.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpolygon.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qregion.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpainterpath.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qcursor.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QWidget \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qwidget.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpalette.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qbrush.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qfont.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qfontmetrics.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qfontinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qsizepolicy.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qkeysequence.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qevent.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qvector2d.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtouchdevice.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest_network.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QHostAddress \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qhostaddress.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qtnetworkglobal.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qtnetwork-config.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qabstractsocket.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QNetworkCookie \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qnetworkcookie.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QSharedDataPointer \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QList \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QMetaType \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QNetworkReply \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qnetworkreply.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QIODevice \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QString \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QVariant \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QNetworkRequest \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qnetworkrequest.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QUrl \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QNetworkAccessManager \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QVector \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QSslConfiguration \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslconfiguration.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslsocket.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qtcpsocket.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslerror.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslcertificate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qssl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QFlags \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest_widgets.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest_gui.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestassert.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestevent.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestkeyboard.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestspontaneevent.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qguiapplication.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qinputmethod.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qapplication.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestmouse.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QDebug \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtesttouch.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QSizePolicy \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QMetaEnum \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qttestversion.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QPushButton \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QLineEdit \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qframe.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextcursor.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextformat.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpen.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextoption.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QDialogButtonBox \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
-		../../ChessQt/ChessQtGUI/mainwindow.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMainWindow \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmainwindow.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsScene \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsscene.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsView \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsview.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpainter.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qscrollarea.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsItem \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsitem.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/QKeyEvent \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMessageBox \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmessagebox.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialog.h \
-		../../ChessQt/ChessQtGUI/accountmanagement.h \
-		../../ChessQt/ChessQtGUI/player.h \
-		../../ChessQt/ChessQtGUI/handler.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsPixmapItem \
-		../../ChessQt/ChessQtGUI/registrationdialog.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QDialog \
-		../../ChessQt/ChessQtGUI/tests.h \
-		moc_predefs.h \
-		/home/will/Qt/5.9.5/gcc_64/bin/moc
-	/home/will/Qt/5.9.5/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/will/Qt/5.9.5/gcc_64/mkspecs/linux-g++ -I/home/will/Desktop/prog/c++/ChessQt/ChessQt/ChessQtGUI -I/home/will/Qt/5.9.5/gcc_64/include -I/home/will/Qt/5.9.5/gcc_64/include/QtWidgets -I/home/will/Qt/5.9.5/gcc_64/include/QtGui -I/home/will/Qt/5.9.5/gcc_64/include/QtTest -I/home/will/Qt/5.9.5/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../../ChessQt/ChessQtGUI/tests.h -o moc_tests.cpp
-
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
 compiler_uic_make_all: ui_mainwindow.h ui_registrationdialog.h ui_logindialog.h
@@ -1476,7 +1148,6 @@ main.o: ../../ChessQt/ChessQtGUI/main.cpp /home/will/Qt/5.9.5/gcc_64/include/QtW
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qframe.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsItem \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsitem.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/QKeyEvent \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMessageBox \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmessagebox.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialog.h \
@@ -1604,7 +1275,6 @@ mainwindow.o: ../../ChessQt/ChessQtGUI/mainwindow.cpp ../../ChessQt/ChessQtGUI/m
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qframe.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsItem \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsitem.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/QKeyEvent \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMessageBox \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmessagebox.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialog.h \
@@ -1615,6 +1285,58 @@ mainwindow.o: ../../ChessQt/ChessQtGUI/mainwindow.cpp ../../ChessQt/ChessQtGUI/m
 		../../ChessQt/ChessQtGUI/registrationdialog.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QDialog \
 		ui_mainwindow.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QVariant \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QAction \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qaction.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QApplication \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qapplication.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qeventloop.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qguiapplication.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qinputmethod.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGroupBox \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgroupbox.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QHeaderView \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qvalidator.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qregularexpression.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qslider.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstyle.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QLabel \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qlabel.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMenu \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmenu.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMenuBar \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmenubar.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QPushButton \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QSpinBox \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qspinbox.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QStackedWidget \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstackedwidget.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QStatusBar \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstatusbar.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QTextBrowser \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtextbrowser.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtextedit.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextdocument.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextcursor.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextformat.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QWidget \
 		../../ChessQt/ChessQtGUI/logindialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../ChessQt/ChessQtGUI/mainwindow.cpp
 
@@ -1725,24 +1447,57 @@ logindialog.o: ../../ChessQt/ChessQtGUI/logindialog.cpp ../../ChessQt/ChessQtGUI
 		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qvector2d.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtouchdevice.h \
 		ui_logindialog.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QVariant \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QAction \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qaction.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qicon.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QApplication \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qapplication.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qeventloop.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qguiapplication.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qinputmethod.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QDialogButtonBox \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QHeaderView \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qframe.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qvalidator.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qregularexpression.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qslider.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstyle.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QLineEdit \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextcursor.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextformat.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpen.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextoption.h \
 		../../ChessQt/ChessQtGUI/mainwindow.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMainWindow \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmainwindow.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qicon.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsScene \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsscene.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpen.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsView \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsview.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpainter.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextoption.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qscrollarea.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qframe.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsItem \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsitem.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/QKeyEvent \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMessageBox \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmessagebox.h \
 		../../ChessQt/ChessQtGUI/accountmanagement.h \
@@ -1854,7 +1609,47 @@ registrationdialog.o: ../../ChessQt/ChessQtGUI/registrationdialog.cpp ../../Ches
 		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfiledevice.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qvector2d.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_registrationdialog.h
+		ui_registrationdialog.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QVariant \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QAction \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qaction.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qicon.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QApplication \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qapplication.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qeventloop.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qguiapplication.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qinputmethod.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QButtonGroup \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QDialogButtonBox \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QHeaderView \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qframe.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qvalidator.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qregularexpression.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qslider.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstyle.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QLineEdit \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextcursor.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextformat.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpen.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextoption.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o registrationdialog.o ../../ChessQt/ChessQtGUI/registrationdialog.cpp
 
 player.o: ../../ChessQt/ChessQtGUI/player.cpp ../../ChessQt/ChessQtGUI/player.h
@@ -2103,14 +1898,18 @@ handler.o: ../../ChessQt/ChessQtGUI/handler.cpp ../../ChessQt/ChessQtGUI/handler
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qframe.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsItem \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/QKeyEvent \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMessageBox \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmessagebox.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialog.h \
 		../../ChessQt/ChessQtGUI/registrationdialog.h \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QDialog \
 		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QStatusBar \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstatusbar.h
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qstatusbar.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMenuBar \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmenubar.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmenu.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qaction.h \
+		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qactiongroup.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o handler.o ../../ChessQt/ChessQtGUI/handler.cpp
 
 knight.o: ../../ChessQt/ChessQtGUI/knight.cpp ../../ChessQt/ChessQtGUI/knight.h \
@@ -2915,325 +2714,6 @@ take.o: ../../ChessQt/ChessQtGUI/take.cpp ../../ChessQt/ChessQtGUI/take.h \
 		../../ChessQt/ChessQtGUI/player.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o take.o ../../ChessQt/ChessQtGUI/take.cpp
 
-tests.o: ../../ChessQt/ChessQtGUI/tests.cpp ../../ChessQt/ChessQtGUI/tests.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/QtTest \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/QtTestDepends \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QtCore \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QtCoreDepends \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qglobal.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qconfig-bootstrapped.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qconfig.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtcore-config.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsystemdetection.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qprocessordetection.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcompilerdetection.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtypeinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsysinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlogging.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qflags.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qatomic.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbasicatomic.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qatomic_bootstrap.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qgenericatomic.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qatomic_cxx11.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qatomic_msvc.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qglobalstatic.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmutex.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qnumeric.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qversiontagging.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractanimation.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobject.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobjectdefs.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qnamespace.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstring.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qchar.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbytearray.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qrefcount.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qarraydata.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstringbuilder.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlist.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qalgorithms.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qiterator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qhashfunctions.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpair.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbytearraylist.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstringlist.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qregexp.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstringmatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcoreevent.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qscopedpointer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmetatype.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qvarlengtharray.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcontainerfwd.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobject_impl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstracteventdispatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qeventloop.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qvariant.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmap.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdebug.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qhash.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtextstream.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qiodevice.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlocale.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qshareddata.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qvector.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpoint.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qset.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcontiguouscache.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsharedpointer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsharedpointer_impl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractproxymodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstractstate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qabstracttransition.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qanimationgroup.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qarraydataops.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qarraydatapointer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbasictimer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbitarray.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbuffer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qbytearraymatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcache.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcollator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcommandlineoption.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcommandlineparser.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcoreapplication.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qcryptographichash.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdatastream.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdatetime.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdeadlinetimer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qelapsedtimer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdir.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfileinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfile.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfiledevice.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qdiriterator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qeasingcurve.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qendian.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qeventtransition.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qexception.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfactoryinterface.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfileselector.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QObject \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QStringList \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfilesystemwatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfinalstate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfuture.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfutureinterface.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qrunnable.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qresultstore.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfuturesynchronizer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qfuturewatcher.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qhistorystate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qidentityproxymodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qisenum.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qjsonarray.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qjsonvalue.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qjsondocument.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qjsonobject.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlibrary.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlibraryinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qversionnumber.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qline.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlinkedlist.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qlockfile.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qloggingcategory.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmargins.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmath.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmessageauthenticationcode.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmetaobject.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmimedata.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmimedatabase.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qmimetype.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qobjectcleanuphandler.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qoperatingsystemversion.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qparallelanimationgroup.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpauseanimation.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qplugin.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpointer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpluginloader.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qprocess.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qpropertyanimation.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qvariantanimation.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qqueue.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qreadwritelock.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qrect.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsize.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qregularexpression.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qresource.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsavefile.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qscopedvaluerollback.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsemaphore.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsequentialanimationgroup.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsettings.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsharedmemory.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsignalmapper.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsignaltransition.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsocketnotifier.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsortfilterproxymodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstack.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstandardpaths.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstatemachine.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstorageinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qstringlistmodel.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qsystemsemaphore.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtemporarydir.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QScopedPointer \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtemporaryfile.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtextboundaryfinder.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtextcodec.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qthread.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qthreadpool.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qthreadstorage.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtimeline.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtimer.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtimezone.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtranslator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtypetraits.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qurl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qurlquery.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/quuid.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qwaitcondition.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qwineventnotifier.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qxmlstream.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/qtcoreversion.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qbenchmark.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest_global.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qbenchmarkmetric.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qsignalspy.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtesteventloop.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestcase.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestdata.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestsystem.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/QWindow \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qwindow.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtguiglobal.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtgui-config.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QEvent \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QMargins \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QRect \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qsurface.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qsurfaceformat.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qwindowdefs.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qwindowdefs_win.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qicon.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpixmap.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpaintdevice.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qcolor.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qrgb.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qrgba64.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qimage.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpixelformat.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtransform.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qmatrix.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpolygon.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qregion.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpainterpath.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qcursor.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QWidget \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qwidget.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtwidgets-config.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpalette.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qbrush.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qfont.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qfontmetrics.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qfontinfo.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qsizepolicy.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qkeysequence.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qevent.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qvector2d.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtouchdevice.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest_network.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QHostAddress \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qhostaddress.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qtnetworkglobal.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qtnetwork-config.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qabstractsocket.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QNetworkCookie \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qnetworkcookie.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QSharedDataPointer \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QList \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QMetaType \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QNetworkReply \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qnetworkreply.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QIODevice \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QString \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QVariant \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QNetworkRequest \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qnetworkrequest.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QUrl \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QNetworkAccessManager \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QVector \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QSslConfiguration \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslconfiguration.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslsocket.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qtcpsocket.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslerror.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslcertificate.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qssl.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QFlags \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
-		/home/will/Qt/5.9.5/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest_widgets.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtest_gui.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestassert.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestevent.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestkeyboard.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestspontaneevent.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qguiapplication.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qinputmethod.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qapplication.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtestmouse.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QDebug \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qtesttouch.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QSizePolicy \
-		/home/will/Qt/5.9.5/gcc_64/include/QtCore/QMetaEnum \
-		/home/will/Qt/5.9.5/gcc_64/include/QtTest/qttestversion.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QPushButton \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QLineEdit \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qframe.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextcursor.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextformat.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpen.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qtextoption.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QDialogButtonBox \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
-		../../ChessQt/ChessQtGUI/mainwindow.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMainWindow \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmainwindow.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsScene \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsscene.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsView \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsview.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/qpainter.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qscrollarea.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsItem \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qgraphicsitem.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtGui/QKeyEvent \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QMessageBox \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qmessagebox.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/qdialog.h \
-		../../ChessQt/ChessQtGUI/accountmanagement.h \
-		../../ChessQt/ChessQtGUI/player.h \
-		../../ChessQt/ChessQtGUI/handler.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QGraphicsPixmapItem \
-		../../ChessQt/ChessQtGUI/registrationdialog.h \
-		/home/will/Qt/5.9.5/gcc_64/include/QtWidgets/QDialog
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tests.o ../../ChessQt/ChessQtGUI/tests.cpp
-
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
 
@@ -3242,9 +2722,6 @@ moc_logindialog.o: moc_logindialog.cpp
 
 moc_registrationdialog.o: moc_registrationdialog.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_registrationdialog.o moc_registrationdialog.cpp
-
-moc_tests.o: moc_tests.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_tests.o moc_tests.cpp
 
 ####### Install
 

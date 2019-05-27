@@ -40,8 +40,7 @@ SOURCES += \
     piece.cpp \
     queen.cpp \
     rook.cpp \
-    take.cpp \
-    tests.cpp
+    take.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -57,8 +56,7 @@ HEADERS += \
     piece.h \
     queen.h \
     rook.h \
-    take.h \
-    tests.h
+    take.h
 
 FORMS += \
     mainwindow.ui \
